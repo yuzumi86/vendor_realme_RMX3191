@@ -289,6 +289,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX3191/proprietary/odm/etc/temperature_profile/sys_thermal_control_config.xml:$(TARGET_COPY_OUT_ODM)/etc/temperature_profile/sys_thermal_control_config.xml \
     vendor/realme/RMX3191/proprietary/odm/etc/wifi/txpowerctrl.cfg:$(TARGET_COPY_OUT_ODM)/etc/wifi/txpowerctrl.cfg \
     vendor/realme/RMX3191/proprietary/odm/etc/wifi/wifi.cfg:$(TARGET_COPY_OUT_ODM)/etc/wifi/wifi.cfg \
+    vendor/realme/RMX3191/proprietary/odm/etc/wifi/wifi_active_channel.cfg:$(TARGET_COPY_OUT_ODM)/etc/wifi/wifi_active_channel.cfg \
+    vendor/realme/RMX3191/proprietary/odm/etc/wifi/wifi_passive_channel.cfg:$(TARGET_COPY_OUT_ODM)/etc/wifi/wifi_passive_channel.cfg \
     vendor/realme/RMX3191/proprietary/odm/firmware/aw8697_About_School_RTP_17.bin:$(TARGET_COPY_OUT_ODM)/firmware/aw8697_About_School_RTP_17.bin \
     vendor/realme/RMX3191/proprietary/odm/firmware/aw8697_About_School_RTP_17_165Hz.bin:$(TARGET_COPY_OUT_ODM)/firmware/aw8697_About_School_RTP_17_165Hz.bin \
     vendor/realme/RMX3191/proprietary/odm/firmware/aw8697_About_School_RTP_17_175Hz.bin:$(TARGET_COPY_OUT_ODM)/firmware/aw8697_About_School_RTP_17_175Hz.bin \
@@ -1871,6 +1873,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX3191/proprietary/vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_bt_1a_1_hdr.bin \
     vendor/realme/RMX3191/proprietary/vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_mcu_1a_1_hdr.bin \
     vendor/realme/RMX3191/proprietary/vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_wifi_1a_1_hdr.bin \
+    vendor/realme/RMX3191/proprietary/vendor/lib/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/AVCSecureVdecCA.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib/VP9SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/VP9SecureVdecCA.so \
     vendor/realme/RMX3191/proprietary/vendor/lib/hw/android.hardware.thermal@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.thermal@2.0-impl.so \
     vendor/realme/RMX3191/proprietary/vendor/lib/hw/audio.primary.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6768.so \
     vendor/realme/RMX3191/proprietary/vendor/lib/hw/audio.r_submix.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.mt6768.so \
@@ -2062,9 +2066,12 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX3191/proprietary/vendor/lib/vendor.mediatek.hardware.nvram@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.nvram@1.1.so \
     vendor/realme/RMX3191/proprietary/vendor/lib/vendor.mediatek.hardware.rcs@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.rcs@2.0.so \
     vendor/realme/RMX3191/proprietary/vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.videotelephony@1.0.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib64/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/AVCSecureVdecCA.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib64/VP9SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/VP9SecureVdecCA.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/arm.graphics-V1-ndk_platform.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libGLES_meow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_meow.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libMEOW_data.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_data.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libMEOW_gift.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_gift.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libMEOW_qt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_qt.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/egl/libMEOW_trace.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_trace.so \
@@ -2424,11 +2431,13 @@ PRODUCT_COPY_FILES += \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysenv.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libtflite_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_mtk.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libthha.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthha.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib64/libtlcWidevineModularDrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlcWidevineModularDrm.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libtranslator_mapi_v3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mapi_v3.0.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libtranslator_mdmi_v2.8.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mdmi_v2.8.2.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libtranslator_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_utils.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libtrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrm.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libudf.so \
+    vendor/realme/RMX3191/proprietary/vendor/lib64/liburee_meta_drmkeyinstall.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liburee_meta_drmkeyinstall.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libvcodec_oal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcodec_oal.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libvcodecdrv_header_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcodecdrv_header_stub.so \
     vendor/realme/RMX3191/proprietary/vendor/lib64/libverno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libverno.so \
